@@ -35,26 +35,27 @@ namespace Lab12
             Console.ReadKey();
         }
 
-        public static class Circle
+        
+    }
+    public static class Circle
+    {
+        public static double Length(double r)
         {
-            public static double Length(double r)
+            return 2 * Math.PI * r;
+        }
+        public static double Area(double r)
+        {
+            return Math.PI * Math.Pow(r, 2);
+        }
+        public static bool PointInCircle(int x, int y, double r, int x0, int y0)
+        {
+            if ((Math.Pow(x - x0, 2) + Math.Pow(y - y0, 2)) <= Math.Pow(r, 2))
             {
-                return 2 * Math.PI * r;
+                return true;
             }
-            public static double Area(double r)
+            else
             {
-                return Math.PI * Math.Pow(r, 2);
-            }
-            public static bool PointInCircle(int x, int y, double r, int x0, int y0)
-            {
-                if ((Math.Pow(x-x0,2)+Math.Pow(y-y0,2)) <= Math.Pow(r,2))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
         }
     }
